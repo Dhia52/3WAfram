@@ -1,13 +1,13 @@
 {
-    "name": "noureddy/3wafram",
-    "description": "3WA framework",
+    "require": {
+        "symfony/http-foundation": "^4.4",
+        "nikic/fast-route": "^1.3",
+        "twig/twig": "^2.12"
+    },
     "autoload": {
         "psr-4": {
             "App\\":"src/",
-            "3WAfram\\" : "3WAfram/"
+            "Fram\\" : "app/3WAfram/"
         }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^8.5"
     }
 }
