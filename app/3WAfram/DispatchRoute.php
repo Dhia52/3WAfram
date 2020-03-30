@@ -36,6 +36,8 @@ class DispatchRoute
             case Dispatcher::NOT_FOUND:
                 // ... 404 Not Found
                 http_response_code(404);
+                $controller = new \App\Controller\Error(404);
+                echo $controller->displayErrorPage();
                 break;
             case Dispatcher::METHOD_NOT_ALLOWED:
                 $allowedMethods = $routeInfo[1];

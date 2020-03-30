@@ -6,8 +6,13 @@ use \Fram\AbstractController;
 
 class Home extends AbstractController
 {
-    public function display()
+    public function home()
     {
         return $this->render('welcome');
+    }
+
+    public function contact()
+    {
+        return $this->render('contact');
     }
 }

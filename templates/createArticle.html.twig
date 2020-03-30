@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Nouvel article{% endblock %}
+{% block contents %}
+    {% if flash %}
+        <h3>{{ flash.message }}</h3>
+    {% endif %}
+    <form method="POST" action="/article/post">
+        <p><label for="title">Titre de l'article : </label> <input type="text" name="title"/></p>
+        <label for="contents">Corps de l'article : </label></br>
+        <textarea name="contents" placeholder="Corps de l'article"></textarea></br>
+        <button>Publier</button>
+    </form>
+{% endblock %}
