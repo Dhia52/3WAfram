@@ -4,13 +4,13 @@ namespace Fram\Database;
 
 include(dirname(__DIR__, 2) . '/config.php');
 
-class ConnectMysql extends \Fram\GenericSingleton
+class MySql extends \Fram\GenericSingleton implements iDatabase
 {
-    private $pdo;
+    private $db;
 
     protected function __construct()
     {
-        $config = getConfig()['db'];
+        $config = getConfig()['mysql'];
         
         $host = $config['host'];
         $dbname = $config['dbname'];
@@ -20,8 +20,8 @@ class ConnectMysql extends \Fram\GenericSingleton
         $this->pdo = new \PDO("mysql:host=$host;dbname=$dbname", $username, $pass);
     }
 
-    public function getPdo()
+    public function getDatabase()
     {
-        return $this->pdo;
+        return $this->db;
     }
 }

@@ -4,5 +4,8 @@
 
 function getConfig()
 {
-    return ['db' => ['host' => '', 'dbname' => '', 'username' => '', 'pass' => '']];
+    return [
+        'mysql' => ['host' => 'host', 'dbname' => 'dbname', 'username' => 'username', 'pass' => 'pass'],
+        'mongodb' => ['host' => 'mongodb+srv://*****', 'dbname' => 'dbname']
+    ];
 }
